@@ -30,6 +30,12 @@
         <p class="form-row">
             <?php _e( 'Note: Your password will be generated automatically and sent to your email address. You may change it after you log in.', 'personalize-login' ); ?>
         </p>
+        
+        <?php if ( $attributes['recaptcha_site_key'] ) : ?>
+            <div class="recaptcha-container">
+                <div class="g-recaptcha" data-sitekey="<?php echo $attributes['recaptcha_site_key']; ?>"></div>
+            </div>
+        <?php endif; ?>
  
         <p class="signup-submit">
             <input type="submit" name="submit" class="register-button"
