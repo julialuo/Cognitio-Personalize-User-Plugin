@@ -331,7 +331,7 @@ class Personalize_Login_Plugin {
         } elseif ( ! get_option( 'users_can_register' ) ) {
             return __( 'Registering new users is currently not allowed.', 'personalize-login' );
         } else {
-            return $this->get_template_html( 'register_form', $attributes );
+            return $this->get_template_html( 'register-form', $attributes );
         }
     }
     
